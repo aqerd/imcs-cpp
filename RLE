@@ -1,0 +1,23 @@
+function RLE(input) {
+    let encoded = '';
+    let count = 1;
+
+    for (let i = 1; i <= input.length; i++) {
+        if (input[i] === input[i - 1]) {
+            count++;
+        } else {
+            if (count == 1) {
+                encoded += input[i - 1];
+            } else if (count == 2) {
+                encoded += input[i - 1] + input[i - 1];
+            } else {
+                encoded += '#' + count + input[i - 1];
+            }
+            count = 1;
+        }
+    }
+    return encoded;
+}
+
+const str = 'AABBBCCC3257468UUUUUU';
+console.log(RLE(str));
