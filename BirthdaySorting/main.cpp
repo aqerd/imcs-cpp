@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <iomanip>
 using namespace std;
 
 struct Student {
@@ -62,8 +63,10 @@ void to_file(const string& filename, Student lines[], const int& n){
     ofstream output(filename);
     if (output.is_open()) {
         for (int i = 0; i < n; i++) {
-            output << lines[i].name << " " << lines[i].lastname << "\t" << lines[i].day << "." << lines[i].month << "." << lines[i].year << endl;
-    }
+            output << left << setw(24) << setfill(' ') << (lines[i].name + " " + lines[i].lastname) 
+                << setfill(' ') << " " << right << setw(2) << setfill('0') << lines[i].day << "."
+                << setw(2) << lines[i].month << "." << setw(4) << lines[i].year << endl;
+        }
         output.close();
         cout << "Sorted successfully" << endl;
     } else {
@@ -104,7 +107,9 @@ int main() {
 
     //Вывод отсортированных в терминал
     /*for (int i = 0; i < n; i++) {
-        cout << lines[i].name << " " << lines[i].lastname << "\t" << lines[i].day << "." << lines[i].month << "." << lines[i].year << endl;
+        cout << left << setw(24) << setfill(' ') << (lines[i].name + " " + lines[i].lastname) 
+                << setfill(' ') << " " << right << setw(2) << setfill('0') << lines[i].day << "."
+                << setw(2) << lines[i].month << "." << setw(4) << lines[i].year << endl;
     }*/
 
     //Вывод во второй файл
