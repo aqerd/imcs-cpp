@@ -5,6 +5,8 @@ Projects made by me at MathMech
 
 C++
 > В текстовом файле хранится информация о каждом студенте фамилия, имя, день, месяц и год рождения. Упорядочить информацию файла source.txt по возрастанию даты рождения студентов и вывести ее в новый текстовый файл. Данное упражнение необходимо выполнить без использования встроенной функции qsort.
+## [Reverse Polish Notation](https://github.com/aqerd/MathMech-Projects/tree/main/ReversePolishNotation)
+:white_check_mark: Done
 ## Virtual Machine
 :eight_pointed_black_star: In Making
 
