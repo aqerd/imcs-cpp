@@ -10,10 +10,10 @@ C++
 :white_check_mark: Done
 
 C++
-## Virtual Machine
+## [Virtual Machine](https://github.com/aqerd/MathMech-Projects/tree/main/VirtualMachine)
 :white_check_mark: Done
 JavaScript
 
-## RLE
+## [Run-Length Encoding](https://github.com/aqerd/MathMech-Projects/tree/main/RunLengthEncoding)
 :eight_pointed_black_star:	In Making
 JavaScript
