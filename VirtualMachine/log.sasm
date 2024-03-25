@@ -1,0 +1,10 @@
+input 100
+input 101
+add 100 101 102
+output 102
+sub 100 101 102
+output 102
+mul 100 101 102
+output 102
+div 100 101 102
+output 102
