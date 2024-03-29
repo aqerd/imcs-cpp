@@ -13,4 +13,4 @@ Projects made by me at MathMech
 :white_check_mark: Done (JavaScript)
 
 ## [Run-Length Encoding](https://github.com/aqerd/MathMech-Projects/tree/main/RunLengthEncoding)
-:eight_pointed_black_star:	In Making (JavaScript)
+:white_check_mark: Done (JavaScript)
