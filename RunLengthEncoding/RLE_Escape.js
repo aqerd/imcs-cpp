@@ -1,36 +1,50 @@
-//надо подойти в след раз и напомнить что я сделал rle сегодня, чтобы получить доп баллы
-// https://studfile.net/preview/1863892/
+const readline = require('readline');
 
-function encode(input) {
-    let encoded = '';
+function code(str){
     let count = 1;
-
-    for (let i = 1; i <= input.length; i++) {
-        if (input[i] === input[i - 1]) {
+    let coded_str = "";
+    let i = 0;
+    while (str.charAt(i)) {
+        if (str.charAt(i) == str.charAt(i + 1)) {
             count++;
-        } else {
-            if (count == 1 || count == 2) { //if n >= 3
-                for (count; count > 0; count--){
-                    encoded += input[i - 1];
-                }
-            } else if (count < 255) {
-                encoded += '#' + count + input[i - 1];
-            } else {
-                let j = count;
-                for (let k = 0; k <= count; k++){
-                    if (k % 255 == 0 && k != 0) {
-                        encoded += '#' + k + input[i - 1];
-                        j -= 255;
-                    }
-                } 
-                encoded += '#' + j + input[i - 1];
+        } else if (count > 3 || str.charCodeAt(i) == '#'.charCodeAt(0)) {
+            while (count > 255) {
+                coded_str += '#' + String.fromCharCode(255) + str.charAt(i);
+                count -= 255;
             }
+            coded_str += '#' + String.fromCharCode(count) + str.charAt(i);
             count = 1;
+        } else {
+            while (count !== 0) {
+                coded_str += str.charAt(i);
+                count--;
+            }
+            count++;
         }
+        i++;
     }
-    return encoded;
+    //console.log("Escape code:", coded_str);
+    return coded_str;
 }
 
+function decode(str){
+    let decoded_str = "";
+    i = 0;
+    while (str.charAt(i)) {
+        if (str.charAt(i) == '#') {
+            for (let q = 0; q < str.charCodeAt(i + 1); q++) {
+                decoded_str += str.charAt(i + 2);
+            }
+            i = i + 3;
+        } else {
+            decoded_str += str.charAt(i);
+            i++;
+        }
+    }
+    //console.log("Escape decode:", decoded_str);
+    return decoded_str;
+}
 
-const str = 'KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKLL';
-console.log(encode(str));
+let str = "EJHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHWWrrWWWWWWWW0";
+console.log(decode(decode(code(code(str)))));
+console.log(str);
