@@ -14,3 +14,9 @@ Projects made by me at MathMech
 
 ## [Run-Length Encoding](https://github.com/aqerd/MathMech-Projects/tree/main/RunLengthEncoding)
 :white_check_mark: Done (JavaScript)
+
+## [Shannon Entropy (Entropy in information theory)](https://github.com/aqerd/MathMech-Projects/tree/main/ShannonEntropy)
+:white_check_mark: Done (JavaScript)
+
+## [Doubly Linked List](https://github.com/aqerd/MathMech-Projects/tree/main/DoublyLinkedList)
+:eight_pointed_black_star: Adding new methods (C++)
