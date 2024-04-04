@@ -30,3 +30,7 @@ Projects made by me at MathMech
 ## [Coordinates](https://github.com/aqerd/MathMech-Projects/tree/main/Coordinates)
 - :white_check_mark: Done
 - C++
+
+## [Complex Numbers](https://github.com/aqerd/MathMech-Projects/tree/main/ComplexNumbers)
+- :white_check_mark: Done
+- C++
