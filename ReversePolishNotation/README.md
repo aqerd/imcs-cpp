@@ -10,3 +10,5 @@ Example:
 
 Output:
 > 107.25
+
+To delete RPN.exe, run clear.bat
