@@ -26,4 +26,7 @@ Projects made by me at MathMech
 ## [Doubly Linked List](https://github.com/aqerd/MathMech-Projects/tree/main/DoublyLinkedList)
 - :eight_pointed_black_star: Adding new methods soon
 - C++
-  
+
+##[Coordinates](https://github.com/aqerd/MathMech-Projects/tree/main/Coordinates)
+- :white_check_mark: Done
+- C++
