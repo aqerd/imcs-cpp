@@ -4,7 +4,11 @@
 - pop_front();
 - pop_back();
 - clear();
-- insert(int q, int n) (DOESN'T WORK AT THIS MOMENT, SO IT'S JUST COMMENTED);
 - sort();
 - size();
 - OutputDList().
+
+#### DOESN'T WORK AT THIS MOMENT:
+- insert(int q, int n);
+- erase(int n);
+- erasebypointer(Node *p);
