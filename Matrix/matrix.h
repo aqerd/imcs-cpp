@@ -12,5 +12,5 @@ public:
     Matrix &operator+(const Matrix &);
     Matrix &operator-(const Matrix &);
     Matrix &operator*(double);
-    //Matrix &operator*(const Matrix &);
+    Matrix &operator*(const Matrix &);
 };

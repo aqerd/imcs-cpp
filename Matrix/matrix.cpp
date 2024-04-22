@@ -30,15 +30,15 @@ Matrix::Matrix(int n){
     }
 }
 
-void Matrix::check_dimension(const Matrix & T){
+void Matrix::check_dimension(const Matrix &T){
     if (N != T.N){
         cout << "Error: matrixes have different dimensions" << endl;
         exit(1);
     }
 }
 
-double* Matrix::operator[](int idx){
-    return m[idx];
+double* Matrix::operator[](int index){
+    return m[index];
 }
 /*
 ostream operator<<(ostream &os, const Matrix &obj){
@@ -52,7 +52,7 @@ ostream operator<<(ostream &os, const Matrix &obj){
     return os;
 }*/
 
-Matrix& Matrix::operator=(const Matrix & A){
+Matrix& Matrix::operator=(const Matrix &A){
     if (N != A.N){
         clear();
         N = A.N;
@@ -65,7 +65,7 @@ Matrix& Matrix::operator=(const Matrix & A){
     return *this;
 }
 
-Matrix& Matrix::operator+(const Matrix & T){
+Matrix& Matrix::operator+(const Matrix &T){
     check_dimension(T);
     Matrix* P = new Matrix(N);
     for (int i = 0; i < N; i++){
@@ -76,7 +76,7 @@ Matrix& Matrix::operator+(const Matrix & T){
     return *P;
 }
 
-Matrix& Matrix::operator-(const Matrix & T){
+Matrix& Matrix::operator-(const Matrix &T){
     check_dimension(T);
     Matrix* P = new Matrix(N);
     for (int i = 0; i < N; i++){
@@ -87,17 +87,28 @@ Matrix& Matrix::operator-(const Matrix & T){
     return *P;
 }
 
-Matrix& Matrix::operator*(double phi){
+Matrix& Matrix::operator*(double scalar){
     Matrix* P = new Matrix(N);
     for (int i = 0; i < N; i++){
         for (int j = 0; j < N; j++){
-            *P[i][j] = m[i][j] * phi;
+            *P[i][j] = m[i][j] * scalar;
         }
     }
     return *P;
 }
 
-//Matrix& Matrix::operator*(const Matrix & A){}
+Matrix& Matrix::operator*(const Matrix &T){
+    check_dimension(T);
+    Matrix* P = new Matrix(N);
+    for (int i = 0; i < N; i++){
+        for (int j = 0; j < N; j++){
+            for (int k = 0; k < N; k++){
+                *P[i][j] += m[i][k] - T.m[k][j];
+            }
+        }
+    }
+    return *P;
+}
 
 Matrix::~Matrix(){
     clear();
