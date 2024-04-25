@@ -19,7 +19,7 @@ int main(){
     B[1][1] = 20;
 
     C = A; 
-    //cout << "A = " << A << endl;
+    cout << "A = " << A << endl;
     addAB = A + B;
     subAB = A - B;
     scalarA = A * scalar;

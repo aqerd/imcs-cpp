@@ -7,7 +7,7 @@ class Matrix{
 public:
     Matrix(), Matrix(int), ~Matrix();
     double *operator[](int);
-    //friend ostream &operator<<(ostream &, const Matrix &);
+    friend ostream &operator<<(ostream &, const Matrix &);
     Matrix &operator=(const Matrix &);
     Matrix &operator+(const Matrix &);
     Matrix &operator-(const Matrix &);

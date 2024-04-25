@@ -32,7 +32,7 @@ Matrix::Matrix(int n){
 
 void Matrix::check_dimension(const Matrix &T){
     if (N != T.N){
-        cout << "Error: matrixes have different dimensions" << endl;
+        cout << "Error: matrices have different dimensions" << endl;
         exit(1);
     }
 }
@@ -40,8 +40,8 @@ void Matrix::check_dimension(const Matrix &T){
 double* Matrix::operator[](int index){
     return m[index];
 }
-/*
-ostream operator<<(ostream &os, const Matrix &obj){
+
+ostream &operator<<(ostream &os, const Matrix &obj){
     os << endl;
     for (int i = 0; i < obj.N; i++){
         for (int j = 0; j < obj.N; j++){
@@ -50,7 +50,7 @@ ostream operator<<(ostream &os, const Matrix &obj){
         os << endl;
     }
     return os;
-}*/
+}
 
 Matrix& Matrix::operator=(const Matrix &A){
     if (N != A.N){
