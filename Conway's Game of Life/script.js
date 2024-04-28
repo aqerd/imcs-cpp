@@ -34,7 +34,6 @@ function copyAndResetGrid() {
     }
 }
 
-// Initialize
 function initialize() {
     createTable();
     initializeGrids();
@@ -42,11 +41,9 @@ function initialize() {
     setupControlButtons();
 }
 
-// Lay out the board
 function createTable() {
     let gridContainer = document.getElementById('gridContainer');
     if (!gridContainer) {
-        // Throw error
         console.error("Problem: No div for the drid table!");
     }
     let table = document.createElement("table");
@@ -95,15 +92,12 @@ function createTable() {
     }
 
 function setupControlButtons() {
-    // button to start
     let startButton = document.getElementById('start');
     startButton.onclick = startButtonHandler;
     
-    // button to clear
     let clearButton = document.getElementById('clear');
     clearButton.onclick = clearButtonHandler;
     
-    // button to set random initial state
     let randomButton = document.getElementById("random");
     randomButton.onclick = randomButtonHandler;
 }
@@ -123,7 +117,6 @@ function randomButtonHandler() {
     }
 }
 
-// clear the grid
 function clearButtonHandler() {
     console.log("Clear the game: stop playing, clear the grid");
     
@@ -133,8 +126,6 @@ function clearButtonHandler() {
     clearTimeout(timer);
     
     let cellsList = document.getElementsByClassName("live");
-    // convert to array first, otherwise, you're working on a live node list
-    // and the update doesn't work!
     let cells = [];
     for (let i = 0; i < cellsList.length; i++) {
         cells.push(cellsList[i]);
@@ -146,7 +137,6 @@ function clearButtonHandler() {
     resetGrids;
 }
 
-// start/pause/continue the game
 function startButtonHandler() {
     if (playing) {
         console.log("Pause the game");
@@ -161,7 +151,6 @@ function startButtonHandler() {
     }
 }
 
-// run the life game
 function play() {
     computeNextGen();
     
@@ -177,17 +166,9 @@ function computeNextGen() {
         }
     }
     
-    // copy NextGrid to grid, and reset nextGrid
     copyAndResetGrid();
-    // copy all 1 values to "live" in the table
     updateView();
 }
-
-// RULES
-// Any live cell with fewer than two live neighbours dies, as if caused by under-population.
-// Any live cell with two or three live neighbours lives on to the next generation.
-// Any live cell with more than three live neighbours dies, as if by overcrowding.
-// Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 function applyRules(row, col) {
     let numNeighbors = countNeighbors(row, col);

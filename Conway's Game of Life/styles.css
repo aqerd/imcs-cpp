@@ -28,6 +28,7 @@ td {
     border-radius: 0px;
     width: 10px;
     height: 10px;
+    cursor: crosshair;
 }
 
 span {
@@ -47,7 +48,7 @@ span {
     border-color: #00F5D3;
     background: #00F5D3;
     color: #000;
-    cursor: crosshair;
+    cursor: pointer;
 }
 
 td.dead {
