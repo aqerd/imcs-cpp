@@ -21,3 +21,5 @@ Projects made by me at MathMech
 ### [Huffman coding](https://github.com/aqerd/MathMech-Projects/tree/main/HuffmanCoding) :white_check_mark: `Done` :yellow_circle: `JavaScript`
 ### [Conway's Game of Life](https://github.com/aqerd/MathMech-Projects/tree/main/Conway's%20Game%20of%20Life) :white_check_mark: `Done` :yellow_circle: `JavaScript`
 ### [Substring Algorithms](https://github.com/aqerd/MathMech-Projects/tree/main/Substring%20Algorithms) :x: `Not done yet` :yellow_circle: `JavaScript`
+### Reverse Polish Notation :x: `Not done yet` :yellow_circle: `JavaScript`
+### Notae Caesarianae (Caesar Cipher) :x: `Not done yet` :yellow_circle: `JavaScript`
