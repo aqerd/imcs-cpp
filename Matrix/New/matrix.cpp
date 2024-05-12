@@ -2,6 +2,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <iomanip>
 #include "matrix.h"
 using namespace std;
 
@@ -164,7 +165,7 @@ double* Matrix::operator[](int index) {
 ostream& operator<<(ostream &os, const Matrix &T) {
     for (int i = 0; i < T.N; ++i) {
         for (int j = 0; j < T.N; ++j) {
-            os << T.m[i][j] << " ";
+            os << right << setw(4) << setfill(' ') << T.m[i][j] << " ";
         }
         os << endl;
     }

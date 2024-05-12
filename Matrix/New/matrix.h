@@ -14,7 +14,7 @@ public:
     bool symmetry();
     Matrix transpose();
     double trace() const;
-    static bool compare_trace(const Matrix &A, const Matrix &B);
+    bool compare_trace(const Matrix &A, const Matrix &B);
     Matrix &operator=(const Matrix &T);
     Matrix operator+(const Matrix &T);
     Matrix operator-(const Matrix &T);

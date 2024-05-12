@@ -44,7 +44,7 @@ int main() {
     // Проверка на существование файла
     fstream InputFile(InputFileName);
     if (!InputFile.is_open()) {
-        cout << "ERROR: Unable to open source InputFile" << endl;
+        cout << "ERROR: Unable to open source Input file" << endl;
         exit(1);
     }
 
@@ -94,7 +94,7 @@ int main() {
 
     ofstream OutputFile(OutputFileName);
     if (!OutputFile.is_open()) {
-        cout << "ERROR: Unable to open output InputFile" << endl;
+        cout << "ERROR: Unable to open output Input file" << endl;
         return 1;
     }
 
@@ -104,7 +104,7 @@ int main() {
         OutputFile << "n = " << A.size() << ", Trace: " << A.trace() << endl;
         OutputFile << A << endl;
     }
-    cout << "Matrices written to output InputFile successfully" << endl;
+    cout << "Matrices written into output Input file successfully" << endl;
 
     OutputFile.close();
     system("pause");
