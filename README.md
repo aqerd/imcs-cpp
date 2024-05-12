@@ -11,7 +11,6 @@ Projects made by me at MathMech
 ### [Matrix](https://github.com/aqerd/MathMech-Projects/tree/main/Matrix) :eight_pointed_black_star: `New methods soon` :large_blue_circle: `C++`
 ### [Circle and Vectors](https://github.com/aqerd/MathMech-Projects/tree/main/Circle%20and%20Vectors) :white_check_mark: `Done` :large_blue_circle: `C++`
 ### [Frequent Numbers](https://github.com/aqerd/MathMech-Projects/tree/main/FrequentNumbers) :white_check_mark: `Done` :large_blue_circle: `C++`
-### [Symmetric Matrices](https://github.com/aqerd/MathMech-Projects/tree/main/Symmetric%20Matrices) :x: `Not done yet` :large_blue_circle: `C++`
 
 ## Scripts (Скрипты)
 ### [Virtual Machine](https://github.com/aqerd/MathMech-Projects/tree/main/VirtualMachine) :white_check_mark: `Done` :yellow_circle: `JavaScript`
