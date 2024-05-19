@@ -64,17 +64,18 @@ X my_cos(X x) {
     return result;
 }
 
-int main(){
+int main() {
     double x = M_PI / 4;
-    cout << "Cosinus of real number:" << endl;
+    cout << "Cosinus of a real number:" << endl;
     cout << "My cos(" << x << ") = " << my_cos(x) << endl;
     cout << "Not my cos(" << x << ") = " << cos(x) << endl;
     cout << "--------------------------------------" << endl;
 
-    cout << "Cosinus of complex number:" << endl;
-    Complex z1(1, 2);
+    cout << "Cosinus of a complex number:" << endl;
+    double real = 1, image = 2; // 1 + 2i
+    Complex z1(real, image);
+    complex<double> z2(real, image); 
     cout << "My cos(" << z1.Re << " + " << z1.Im << "i) = " << my_cos(z1.Re) * cosh(z1.Im) << " - " << sin(z1.Re) * sinh(z1.Im) << "i" << endl;
-    complex<double> z2(1, 2); // 1 + 2i
     cout << "Not my cos" << z2 << " = " << cos(z2) << endl;
 
     return 0;
